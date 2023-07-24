@@ -13,6 +13,13 @@
 		A3EEAC042A153B0800975AD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EEAC022A153B0800975AD9 /* Main.storyboard */; };
 		A3EEAC062A153B0900975AD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3EEAC052A153B0900975AD9 /* Assets.xcassets */; };
 		A3EEAC092A153B0900975AD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EEAC072A153B0900975AD9 /* LaunchScreen.storyboard */; };
+		A3EEAC162A153BF300975AD9 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = A3EEAC102A153BF300975AD9 /* Shaders.metal */; };
+		A3EEAC172A153BF300975AD9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EEAC122A153BF300975AD9 /* Helpers.swift */; };
+		A3EEAC182A153BF300975AD9 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EEAC132A153BF300975AD9 /* Renderer.swift */; };
+		A3EEAC192A153BF300975AD9 /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EEAC142A153BF300975AD9 /* MetalBuffer.swift */; };
+		A3EEAC1C2A1549D400975AD9 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3EEAC1B2A1549D400975AD9 /* ARKit.framework */; };
+		A3EEAC1E2A1549DC00975AD9 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3EEAC1D2A1549DC00975AD9 /* MetalKit.framework */; };
+		A3EEAC202A1549ED00975AD9 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3EEAC1F2A1549EC00975AD9 /* Metal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,15 @@
 		A3EEAC052A153B0900975AD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3EEAC082A153B0900975AD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3EEAC0A2A153B0900975AD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3EEAC102A153BF300975AD9 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		A3EEAC112A153BF300975AD9 /* ShaderTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
+		A3EEAC122A153BF300975AD9 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		A3EEAC132A153BF300975AD9 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		A3EEAC142A153BF300975AD9 /* MetalBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
+		A3EEAC152A153BF300975AD9 /* SceneDepthPointCloud-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SceneDepthPointCloud-Bridging-Header.h"; sourceTree = "<group>"; };
+		A3EEAC1B2A1549D400975AD9 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		A3EEAC1D2A1549DC00975AD9 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		A3EEAC1F2A1549EC00975AD9 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3EEAC1C2A1549D400975AD9 /* ARKit.framework in Frameworks */,
+				A3EEAC202A1549ED00975AD9 /* Metal.framework in Frameworks */,
+				A3EEAC1E2A1549DC00975AD9 /* MetalKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +61,7 @@
 			children = (
 				A3EEABFB2A153B0800975AD9 /* DD3DScanner */,
 				A3EEABFA2A153B0800975AD9 /* Products */,
+				A3EEAC1A2A1549D300975AD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +76,12 @@
 		A3EEABFB2A153B0800975AD9 /* DD3DScanner */ = {
 			isa = PBXGroup;
 			children = (
+				A3EEAC122A153BF300975AD9 /* Helpers.swift */,
+				A3EEAC142A153BF300975AD9 /* MetalBuffer.swift */,
+				A3EEAC132A153BF300975AD9 /* Renderer.swift */,
+				A3EEAC152A153BF300975AD9 /* SceneDepthPointCloud-Bridging-Header.h */,
+				A3EEAC102A153BF300975AD9 /* Shaders.metal */,
+				A3EEAC112A153BF300975AD9 /* ShaderTypes.h */,
 				A3EEABFC2A153B0800975AD9 /* AppDelegate.swift */,
 				A3EEABFE2A153B0800975AD9 /* SceneDelegate.swift */,
 				A3EEAC002A153B0800975AD9 /* ViewController.swift */,
@@ -65,6 +91,16 @@
 				A3EEAC0A2A153B0900975AD9 /* Info.plist */,
 			);
 			path = DD3DScanner;
+			sourceTree = "<group>";
+		};
+		A3EEAC1A2A1549D300975AD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3EEAC1F2A1549EC00975AD9 /* Metal.framework */,
+				A3EEAC1D2A1549DC00975AD9 /* MetalKit.framework */,
+				A3EEAC1B2A1549D400975AD9 /* ARKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3EEAC162A153BF300975AD9 /* Shaders.metal in Sources */,
 				A3EEAC012A153B0800975AD9 /* ViewController.swift in Sources */,
 				A3EEABFD2A153B0800975AD9 /* AppDelegate.swift in Sources */,
+				A3EEAC172A153BF300975AD9 /* Helpers.swift in Sources */,
+				A3EEAC182A153BF300975AD9 /* Renderer.swift in Sources */,
+				A3EEAC192A153BF300975AD9 /* MetalBuffer.swift in Sources */,
 				A3EEABFF2A153B0800975AD9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +327,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 267B777Y73;
+				DEVELOPMENT_TEAM = NE2625R7RX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DD3DScanner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -300,9 +340,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dronedeploy.DD3DScanner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codymace.DD3DScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "DD3DScanner/SceneDepthPointCloud-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -315,7 +356,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 267B777Y73;
+				DEVELOPMENT_TEAM = NE2625R7RX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DD3DScanner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -328,9 +369,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dronedeploy.DD3DScanner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codymace.DD3DScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "DD3DScanner/SceneDepthPointCloud-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
