@@ -382,15 +382,16 @@ private extension Renderer {
     }
     
     public func savePointsToFile() -> URL? {
-        let (filePath, file) = self.saveAsLas()
-        return filePath
-        guard let file = file else {
-            return nil
-        }
+//        let (filePath, file) = self.saveAsLas()
+        let (filePath, plyText) = self.saveAsPly()
+//        return filePath
+//        guard let file = file else {
+//            return nil
+//        }
         do {
             // 7
-            try file.write(to: filePath)
-//            try file.write(to: filePath, atomically: true, encoding: String.Encoding.ascii)
+//            try file.write(to: filePath)
+            try plyText.write(to: filePath, atomically: true, encoding: String.Encoding.ascii)
             return filePath
         }
         catch {
